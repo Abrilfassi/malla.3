@@ -5,25 +5,26 @@
   <title>Plan de Estudio Ingeniería Biomédica</title>
   <style>
     :root {
-      --color-regular: #a8d8b9; /* Verde suave */
-      --color-aprobada: #ffb3b3; /* Rosa suave */
-      --color-bloque: #f0f4f8; /* Gris claro */
-      --color-titulo: #2c3e50; /* Gris oscuro */
-      --color-bloqueada: #e0e0e0; /* Gris más claro */
-      --color-boton: #6ab04c; /* Verde suave */
-      --color-boton-hover: #4a69bd; /* Azul suave */
+      --color-fondo: #F5F3EF; /* Marfil suave */
+      --color-texto: #2F2F2F; /* Gris grafito */
+      --color-bordo: #7B2E2E; /* Bordó clásico */
+      --color-progreso-inicial: #D9916E; /* Terracota clara */
+      --color-progreso-medio: #C2A15E; /* Mostaza desaturado */
+      --color-progreso-avanzado: #5A6B3E; /* Verde oliva oscuro */
+      --color-progreso-completo: #2C4A52; /* Azul petróleo profundo */
+      --color-detalle: #E5C28B; /* Crema / dorado apagado */
     }
 
     body {
       font-family: 'Segoe UI', sans-serif; /* Fuente uniforme */
-      background: #f8f9fa; /* Fondo suave */
+      background: var(--color-fondo); /* Fondo suave */
       margin: 0;
       padding: 20px;
     }
 
     h1 {
       text-align: center;
-      color: var(--color-titulo);
+      color: var(--color-texto);
       font-size: 2rem;
     }
 
@@ -32,7 +33,7 @@
     }
 
     .bloque {
-      background: var(--color-bloque);
+      background: var(--color-detalle);
       border-radius: 20px;
       padding: 15px;
       margin: 10px;
@@ -42,7 +43,7 @@
     .bloque h2 {
       font-size: 1.2rem;
       margin-bottom: 10px;
-      color: var(--color-titulo);
+      color: var(--color-texto);
     }
 
     .materia {
@@ -57,19 +58,18 @@
       font-family: 'Segoe UI', sans-serif; /* Fuente de materias */
     }
 
-    .materia.regular {
-      background: var(--color-regular);
-      border-left-color: #b2e0b2; /* Verde más claro */
+    materia.regular {
+      background: var(--color-progreso-inicial);
+      border-left-color: #D9916E; /* Terracota clara */
     }
 
     .materia.aprobada {
-      background: var(--color-aprobada);
+      background: var(--color-progreso-completo);
       text-decoration: line-through;
-      border-left-color: #ff4d4d; /* Rojo suave */
+      border-left-color: var(--color-progreso-completo); /* Azul petróleo profundo */
     }
-
     .materia.bloqueada {
-      background: var(--color-bloqueada);
+      background: #e0e0e0; /* Gris más claro */
       cursor: not-allowed;
       opacity: 0.5;
       pointer-events: none;
@@ -89,14 +89,14 @@
     #usuarioPanel input {
       padding: 10px;
       font-size: 1.2rem;
-      border: 2px solid var(--color-boton);
+      border: 2px solid var(--color-bordo);
       border-radius: 5px;
       transition: border-color 0.3s;
       font-family: 'Segoe UI', sans-serif; /* Fuente uniforme */
     }
 
     #usuarioPanel input:focus {
-      border-color: var(--color-boton-hover);
+      border-color: var(--color-bordo);
       outline: none;
     }
 
@@ -105,7 +105,7 @@
       margin-left: 10px;
       font-size: 1.2rem;
       cursor: pointer;
-      background-color: var(--color-boton);
+      background-color: var(--color-bordo);
       color: white;
       border: none;
       border-radius: 5px;
